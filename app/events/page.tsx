@@ -29,7 +29,7 @@ const PAGE = () => {
                         string,
                         "ATTENDEE" | "VOLUNTEER"
                     > = {};
-                    user?.registrations?.forEach((reg) => {
+                    user?.registrations?.forEach((reg: Registration) => {
                         registrationMap[reg.eventId] = reg.role;
                     });
                     setUserRegistrationsByEventId(registrationMap);
