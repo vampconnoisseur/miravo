@@ -35,7 +35,7 @@ export default async function EventDetailsPage({
         }
 
         const registration = user?.registrations?.find(
-            (r) => r.eventId === event.id
+            (r: Registration) => r.eventId === event.id
         );
         const currentRole = registration?.role;
 
