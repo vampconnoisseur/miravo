@@ -42,10 +42,10 @@ export default function AdminEventsClient({ events }: { events: AppEvent[] }) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {events.map((event) => {
                     const attendees = event.registrations.filter(
-                        (r: Registration) => r.role === "ATTENDEE"
+                        (r) => r.role === "ATTENDEE"
                     ).length;
                     const volunteers = event.registrations.filter(
-                        (r: Registration) => r.role === "VOLUNTEER"
+                        (r) => r.role === "VOLUNTEER"
                     ).length;
 
                     const isLoadingAttendee =
